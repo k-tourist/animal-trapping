@@ -3,11 +3,26 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        primary: '#1a365d',
-        secondary: '#2d3748',
+        primary: {
+          light: '#1a365d',
+          dark: '#60a5fa',
+        },
+        secondary: {
+          light: '#2d3748',
+          dark: '#1f2937',
+        },
+        background: {
+          light: '#f9fafb',
+          dark: '#111827',
+        },
+        card: {
+          light: '#ffffff',
+          dark: '#1f2937',
+        },
       },
     },
   },
