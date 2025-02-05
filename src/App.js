@@ -9,15 +9,15 @@ import "slick-carousel/slick/slick-theme.css";
 function App() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <header className="absolute top-0 left-0 right-0 z-50 backdrop-blur-2xl bg-white/30 shadow-[0_4px_30px_rgba(0,0,0,0.15)]">
+      <header className="relative bg-gray-800 text-white shadow-lg">
         <div className="container mx-auto px-4 py-6">
-          <h1 className="text-4xl font-bold text-center tracking-wider text-slate-800 drop-shadow-[0_2px_2px_rgba(255,255,255,0.6)]">
+          <h1 className="text-4xl font-bold text-center tracking-wider">
             Bergen Utility Contracting
           </h1>
         </div>
       </header>
       
-      <main className="relative">
+      <main>
         <Carousel />
         <div className="container mx-auto px-4 py-8">
           <Services />

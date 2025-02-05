@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 const NextArrow = ({ onClick }) => (
   <button
     onClick={onClick}
-    className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all"
+    className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all focus:outline-none"
     aria-label="Next slide"
   >
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
@@ -16,7 +16,7 @@ const NextArrow = ({ onClick }) => (
 const PrevArrow = ({ onClick }) => (
   <button
     onClick={onClick}
-    className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all"
+    className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all focus:outline-none"
     aria-label="Previous slide"
   >
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
@@ -40,7 +40,15 @@ const Carousel = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative focus:outline-none">
+      <style jsx global>{`
+        .slick-slide, .slick-slide * {
+          outline: none !important;
+        }
+        .slick-prev:before, .slick-next:before {
+          display: none;
+        }
+      `}</style>
       <Slider {...settings}>
         <div className="h-[600px]">
           <img 
